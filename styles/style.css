@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  color: #262626;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: whitesmoke;
+  line-height: 1.4;
+  margin: 0;
+  height: auto;
+}
+
+.wrapper {
+  max-width: 900px;
+  margin: auto;
+  -webkit-box-shadow: 30px 0px 40px rgba(0, 0, 0, 0.1), -30px 0px 40px rgba(0, 0, 0, 0.1);
+          box-shadow: 30px 0px 40px rgba(0, 0, 0, 0.1), -30px 0px 40px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.btn {
+  padding: 0.5rem 2rem;
+  border: 1px #7d7d7d solid;
+  display: inline-block;
+  margin: 2rem 0 0;
+  border-radius: 50px;
+  text-decoration: none;
+  color: #262626;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+  -webkit-transition-property: background, color, border-color;
+  transition-property: background, color, border-color;
+}
+
+.btn:hover {
+  background: #262626;
+  color: whitesmoke;
+  border-color: #262626;
+}
+
+.landing {
+  background: #fff;
+}
+
+.landing .landing-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 40vw;
+          flex: 0 1 40vw;
+  height: 50vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.landing .landing-text h2 {
+  color: #7d7d7d;
+}
+
+.images img {
+  display: block;
+  width: 100%;
+}
+/*# sourceMappingURL=style.css.map */

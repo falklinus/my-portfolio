@@ -1,0 +1,78 @@
+@import 'variables';
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+html {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  color: $dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: $light;
+  line-height: 1.4;
+  margin: 0;
+  height: auto;
+}
+
+.wrapper {
+  max-width: 900px;
+  margin: auto;
+  box-shadow: $shadow;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+h2 {
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.btn {
+  padding: 0.5rem 2rem;
+  border: 1px $primary solid;
+  display: inline-block;
+  margin: 2rem 0 0;
+  border-radius: 50px;
+  text-decoration: none;
+  color: $dark;
+  transition: all 500ms ease;
+  transition-property: background, color, border-color;
+
+  &:hover {
+    background: $dark;
+    color: $light;
+    border-color: $dark;
+  }
+}
+
+.landing {
+  background: #fff;
+  .landing-text {
+    display: flex;
+    flex: 0 1 40vw;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-right: 1rem;
+    padding-left: 1rem;
+
+    h2 {
+      color: $primary;
+    }
+  }
+}
+
+.images {
+  img {
+    display: block;
+    width: 100%;
+  }
+}
