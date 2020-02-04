@@ -41,6 +41,20 @@ body {
   border-color: #262626;
 }
 
+.header {
+  padding: 1.5rem;
+  text-align: center;
+  background: #262626;
+  color: whitesmoke;
+}
+
+.header h2 {
+  border-left: dotted 1px whitesmoke;
+  border-right: dotted 1px whitesmoke;
+  display: inline-block;
+  padding: 0 1rem;
+}
+
 .landing {
   background: #fff;
 }
@@ -91,18 +105,59 @@ body {
   margin: 0;
 }
 
-.images .header {
-  padding: 1.5rem;
+.skills .container {
+  padding: 1.5rem 1rem;
   text-align: center;
-  background: #262626;
-  color: whitesmoke;
 }
 
-.images .header h2 {
-  border-left: dotted 1px whitesmoke;
-  border-right: dotted 1px whitesmoke;
-  display: inline-block;
-  padding: 0 1rem;
+.skills .container .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.skills .container .cards .card {
+  padding: 0.8rem;
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.skills .container .cards .card h3 {
+  margin: 1rem 0;
+}
+
+.skills .container .cards .card .icon {
+  height: 128px;
+  width: 112px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.skills .container .cards .card img {
+  width: 100%;
+}
+
+.break {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  height: 0;
 }
 
 .images img {
@@ -128,6 +183,50 @@ footer h3 {
   margin-bottom: 0;
 }
 
+.js-icon {
+  background: -webkit-gradient(linear, left top, right bottom, from(#ffea00), to(#fabc00));
+  background: linear-gradient(to right bottom, #ffea00, #fabc00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.html-icon {
+  background: -webkit-gradient(linear, left top, right bottom, from(#ff4444), to(#6c0000));
+  background: linear-gradient(to right bottom, #ff4444, #6c0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.css-icon {
+  background: -webkit-gradient(linear, left top, right bottom, from(#7d7dff), to(#001945));
+  background: linear-gradient(to right bottom, #7d7dff, #001945);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.react-icon {
+  color: #00b7cb;
+}
+
+.angular-icon {
+  color: #cb0000;
+}
+
+.sass-icon {
+  color: #ac00bf;
+}
+
+.node-icon {
+  color: #00a700;
+}
+
+.python-icon {
+  background: -webkit-gradient(linear, left top, right bottom, from(#ff975f), to(#d85e00));
+  background: linear-gradient(to right bottom, #ff975f, #d85e00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 @media (min-width: 500px) {
   .landing {
     display: -webkit-box;
@@ -146,6 +245,12 @@ footer h3 {
 @media (min-width: 768px) {
   .btn {
     padding: 1rem 3rem;
+  }
+  .skills .container .cards {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 /*# sourceMappingURL=style.css.map */

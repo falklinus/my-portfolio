@@ -39,6 +39,20 @@ body {
   }
 }
 
+.header {
+  padding: 1.5rem;
+  text-align: center;
+  background: $dark;
+  color: $light;
+
+  h2 {
+    border-left: dotted 1px $light;
+    border-right: dotted 1px $light;
+    display: inline-block;
+    padding: 0 1rem;
+  }
+}
+
 .landing {
   background: #fff;
   .landing-text {
@@ -77,21 +91,47 @@ body {
   }
 }
 
-.images {
-  .header {
-    padding: 1.5rem;
+.skills {
+  .container {
+    padding: 1.5rem 1rem;
     text-align: center;
-    background: $dark;
-    color: $light;
 
-    h2 {
-      border-left: dotted 1px $light;
-      border-right: dotted 1px $light;
-      display: inline-block;
-      padding: 0 1rem;
+    .cards {
+      //margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      .card {
+        padding: 0.8rem;
+        text-align: center;
+        flex: 1;
+
+        h3 {
+          margin: 1rem 0;
+        }
+
+        .icon {
+          height: 128px;
+          width: 112px;
+          margin: auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        img {
+          width: 100%;
+        }
+      }
     }
   }
+}
 
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.images {
   img {
     display: block;
     width: 100%;
@@ -116,6 +156,66 @@ footer {
   }
 }
 
+.js-icon {
+  //color: rgb(227, 208, 0);
+  background: linear-gradient(
+    to right bottom,
+    rgb(255, 234, 0),
+    rgb(250, 188, 0)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.html-icon {
+  //color: rgb(203, 0, 0);
+  background: linear-gradient(
+    to right bottom,
+    rgb(255, 68, 68),
+    rgb(108, 0, 0)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.css-icon {
+  //color: rgb(0, 0, 203);
+  background: linear-gradient(
+    to right bottom,
+    rgb(125, 125, 255),
+    rgb(0, 25, 69)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.react-icon {
+  color: rgb(0, 183, 203);
+}
+
+.angular-icon {
+  color: rgb(203, 0, 0);
+}
+
+.sass-icon {
+  color: rgb(172, 0, 191);
+}
+
+.node-icon {
+  color: rgb(0, 167, 0);
+}
+
+.python-icon {
+  //color: rgb(220, 103, 0);
+  background: linear-gradient(
+    to right bottom,
+    rgb(255, 151, 95),
+    rgb(216, 94, 0)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 @media (min-width: 500px) {
   .landing {
     display: flex;
@@ -134,5 +234,12 @@ footer {
 @media (min-width: 768px) {
   .btn {
     padding: 1rem 3rem;
+  }
+  .skills {
+    .container {
+      .cards {
+        flex-direction: row;
+      }
+    }
   }
 }
