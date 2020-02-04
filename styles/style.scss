@@ -21,19 +21,6 @@ body {
   box-shadow: $shadow;
 }
 
-h1 {
-  font-weight: 400;
-  font-size: 2.5rem;
-  text-transform: uppercase;
-  margin: 0;
-}
-h2 {
-  font-weight: 400;
-  font-size: 1.2rem;
-  text-transform: capitalize;
-  margin: 0;
-}
-
 .btn {
   padding: 0.5rem 2rem;
   border: 1px $primary solid;
@@ -64,15 +51,88 @@ h2 {
     padding-right: 1rem;
     padding-left: 1rem;
 
+    h1 {
+      font-weight: 400;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      margin: 0;
+    }
     h2 {
+      font-weight: 400;
+      font-size: 1.2rem;
+      text-transform: capitalize;
+      margin: 0;
       color: $primary;
     }
+  }
+
+  .landing-image {
+    background: url('../img/devices.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+    flex: 0 1 60vw;
+    margin: 0;
   }
 }
 
 .images {
+  .header {
+    padding: 1.5rem;
+    text-align: center;
+    background: $dark;
+    color: $light;
+
+    h2 {
+      border-left: dotted 1px $light;
+      border-right: dotted 1px $light;
+      display: inline-block;
+      padding: 0 1rem;
+    }
+  }
+
   img {
     display: block;
     width: 100%;
+  }
+
+  .caption {
+    padding: 0.8rem;
+    text-align: center;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  margin: auto;
+  color: $light;
+  background: $dark;
+
+  h3 {
+    font-size: 3rem;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 500px) {
+  .landing {
+    display: flex;
+    height: 100%;
+
+    .landing-text {
+      height: 100vh;
+    }
+
+    .landing-image {
+      height: 100vh;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .btn {
+    padding: 1rem 3rem;
   }
 }
