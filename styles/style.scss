@@ -13,12 +13,14 @@ body {
   line-height: 1.4;
   margin: 0;
   height: auto;
+  overflow-x: hidden;
 }
 
 .wrapper {
-  max-width: 900px;
+  //max-width: 900px;
   margin: auto;
   box-shadow: $shadow;
+  position: relative;
 }
 
 .btn {
@@ -39,6 +41,65 @@ body {
   }
 }
 
+.toggle {
+  .line-1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .line-2 {
+    opacity: 0;
+  }
+  .line-3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+.nav {
+  z-index: 2;
+  width: 100%;
+  height: 5vh;
+  position: fixed;
+  background: $dark;
+  display: flex;
+  align-items: center;
+  .hamburger {
+    cursor: pointer;
+    margin-left: 10px;
+    div {
+      width: 25px;
+      height: 3px;
+      margin: 5px;
+      background: $light;
+      border-radius: 5px;
+      transition: all 0.4s ease;
+    }
+  }
+
+  .nav-links {
+    position: absolute;
+    top: calc(100% - 1px);
+    left: 0;
+    list-style: none;
+    background: $dark;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: calc(95vh + 1px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    a {
+      text-decoration: none;
+      color: $light;
+      font-size: 1.5rem;
+    }
+  }
+
+  .nav-active {
+    transform: translateX(0);
+  }
+}
 .header {
   padding: 1.5rem;
   text-align: center;
@@ -55,6 +116,7 @@ body {
 
 .landing {
   background: #fff;
+
   .landing-text {
     display: flex;
     flex: 0 1 40vw;
@@ -132,10 +194,108 @@ body {
 }
 
 .images {
-  img {
-    display: block;
-    width: 100%;
+  .images-content {
+    padding: 1rem;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+    a {
+      width: 100%;
+      height: 100%;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    #socialape-img {
+      position: relative;
+      cursor: pointer;
+
+      &::before {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease-in-out;
+        opacity: 0;
+        content: 'Social Media Platform';
+        text-align: center;
+        font-size: 1.6rem;
+        font-weight: 700;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        backdrop-filter: blur(3px);
+        background: rgba(0, 0, 0, 0.276);
+        color: $light;
+      }
+      &:hover::before {
+        opacity: 1;
+      }
+    }
+
+    #spotify-img {
+      position: relative;
+      cursor: pointer;
+
+      &::before {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease-in-out;
+        opacity: 0;
+        content: 'SpotifyQuiz';
+        text-align: center;
+        font-size: 1.8rem;
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        backdrop-filter: blur(3px);
+        background: rgba(0, 0, 0, 0.276);
+        color: $light;
+      }
+      &:hover::before {
+        opacity: 1;
+      }
+    }
+    #chatter-img {
+      position: relative;
+      cursor: pointer;
+
+      &::before {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease-in-out;
+        opacity: 0;
+        content: 'Live Chatt App';
+        text-align: center;
+        font-size: 1.8rem;
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        backdrop-filter: blur(3px);
+        background: rgba(0, 0, 0, 0.276);
+        color: $light;
+      }
+      &:hover::before {
+        opacity: 1;
+      }
+    }
   }
+  /* img {
+    display: block;
+    width: 33%;
+    padding: 0;
+  } */
 
   .caption {
     padding: 0.8rem;
@@ -239,6 +399,37 @@ footer {
     .container {
       .cards {
         flex-direction: row;
+      }
+    }
+  }
+  .images {
+    .images-content {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    width: 1024px;
+    overflow-x: hidden;
+
+    .nav {
+      width: 1024px;
+
+      .hamburger {
+        display: none;
+      }
+      .nav-links {
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: 0;
+        position: static;
+        transform: translateX(0);
+
+        a {
+          font-size: 1rem;
+        }
       }
     }
   }
