@@ -12,6 +12,29 @@
     <title>Linus Falk</title>
   </head>
   <body>
+    <ul class="sidenav">
+      <li name="start">
+        <p>Start</p>
+        <i class="fas fa-circle"></i>
+      </li>
+      <li name="images">
+        <p>My Work</p>
+        <i class="far fa-circle"></i>
+      </li>
+      <li name="frontend">
+        <p>Frontend</p>
+        <i class="far fa-circle"></i>
+      </li>
+      <li name="backend">
+        <p>Backend</p>
+        <i class="far fa-circle"></i>
+      </li>
+      <li name="footer">
+        <p>Contact</p>
+        <i class="far fa-circle"></i>
+      </li>
+    </ul>
+    <!-- <div id="cursor"></div> -->
     <div class="wrapper">
       <!-- Navbar -->
       <nav class="nav">
@@ -25,16 +48,16 @@
             <a href="#">Start</a>
           </li>
           <li>
+            <a href="#images">My Work</a>
+          </li>
+          <li>
             <a href="#frontend">Frontend</a>
           </li>
           <li>
             <a href="#backend">Backend</a>
           </li>
           <li>
-            <a href="#images">My Work</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
+            <a href="#footer">Contact</a>
           </li>
         </ul>
       </nav>
@@ -52,16 +75,65 @@
         <div class="landing-image"></div>
       </section>
 
+      <!-- Work Area -->
+      <section class="images" id="images">
+        <div class="header">
+          <h2><a href="#images">My Work</a></h2>
+        </div>
+        <div class="images-content">
+          <a
+            id="socialape-img"
+            href="https://socialapp-e7f03.firebaseapp.com/"
+            target="_blank"
+            ><img src="img/socialape.png" alt=""
+          /></a>
+          <a id="spotify-img">
+            <img src="img/spotify-quiz.png" alt="" />
+          </a>
+          <!-- <img src="img/spotify-quiz-2.png" alt="" /> -->
+          <a
+            id="chatter-img"
+            href="https://chatter-with-react.netlify.com/"
+            target="_blank"
+            ><img src="img/chatter.png" alt=""
+          /></a>
+        </div>
+
+        <!-- <div class="caption">
+          <h3>Photo One</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Necessitatibus, quos?
+          </p>
+        </div> -->
+
+        <!-- <div class="caption">
+          <h3>Photo Two</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Necessitatibus, quos?
+          </p>
+        </div> -->
+
+        <!-- <div class="caption">
+          <h3>Photo Three</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Necessitatibus, quos?
+          </p>
+        </div> -->
+      </section>
+
       <!-- Skills Area -->
       <section class="skills" id="skills">
         <div id="frontend">
           <div class="header">
-            <h2>Front-End</h2>
+            <h2><a href="#frontend">Front-End</a></h2>
           </div>
           <div class="container">
             <!-- <h3>
-              My front-end tech stack mainly includes the following skills
-            </h3> -->
+                My front-end tech stack mainly includes the following skills
+              </h3> -->
             <div class="cards">
               <div class="card">
                 <h3>HTML</h3>
@@ -115,12 +187,12 @@
         </div>
         <div id="backend">
           <div class="header">
-            <h2>Back-End</h2>
+            <h2><a href="#backend">Back-End</a></h2>
           </div>
           <div class="container">
             <!-- <h3>
-              For creating server-side logic, I prefferably use the following
-            </h3> -->
+                For creating server-side logic, I prefferably use the following
+              </h3> -->
             <div class="cards">
               <div class="card">
                 <h3>Node.js</h3>
@@ -169,55 +241,6 @@
             </div>
           </div>
         </div>
-      </section>
-
-      <!-- Images Area -->
-      <section class="images" id="images">
-        <div class="header">
-          <h2>My Work</h2>
-        </div>
-        <div class="images-content">
-          <a
-            id="socialape-img"
-            href="https://socialapp-e7f03.firebaseapp.com/"
-            target="_blank"
-            ><img src="img/socialape.png" alt=""
-          /></a>
-          <a id="spotify-img">
-            <img src="img/spotify-quiz.png" alt="" />
-          </a>
-          <!-- <img src="img/spotify-quiz-2.png" alt="" /> -->
-          <a
-            id="chatter-img"
-            href="https://chatter-with-react.netlify.com/"
-            target="_blank"
-            ><img src="img/chatter.png" alt=""
-          /></a>
-        </div>
-
-        <!-- <div class="caption">
-          <h3>Photo One</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Necessitatibus, quos?
-          </p>
-        </div> -->
-
-        <!-- <div class="caption">
-          <h3>Photo Two</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Necessitatibus, quos?
-          </p>
-        </div> -->
-
-        <!-- <div class="caption">
-          <h3>Photo Three</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Necessitatibus, quos?
-          </p>
-        </div> -->
       </section>
 
       <!--Footer-->
